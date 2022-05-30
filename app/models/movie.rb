@@ -2,12 +2,12 @@
 #
 # Table name: movies
 #
-#  id               :bigint           unsigned, not null, primary key
+#  id               :bigint           not null, primary key
 #  user_id          :bigint           not null
-#  title            :string(255)      not null
-#  description      :text(65535)
-#  thumb_url        :string(255)      not null
-#  video_id         :string(255)      not null
+#  title            :string           not null
+#  description      :text
+#  thumb_url        :string           not null
+#  video_id         :string           not null
 #  vote_downs_count :bigint           default(0), not null
 #  vote_ups_count   :bigint           default(0), not null
 #  created_at       :datetime         not null

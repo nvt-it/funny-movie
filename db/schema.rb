@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
-  create_table "movies", id: { type: :bigint, unsigned: true }, charset: "utf8mb4", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "movies", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "title", null: false
     t.text "description"
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.index ["video_id"], name: "index_movies_on_video_id", unique: true
   end
 
-  create_table "users", id: { type: :bigint, unsigned: true }, charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "encrypted_password", null: false
     t.datetime "remember_created_at"
@@ -35,7 +38,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  create_table "votes", id: { type: :bigint, unsigned: true }, charset: "utf8mb4", force: :cascade do |t|
+  create_table "votes", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "movie_id", null: false
     t.integer "vote_type", default: 0, null: false

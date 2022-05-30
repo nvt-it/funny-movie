@@ -2,7 +2,7 @@
 #
 # Table name: votes
 #
-#  id         :bigint           unsigned, not null, primary key
+#  id         :bigint           not null, primary key
 #  user_id    :bigint           not null
 #  movie_id   :bigint           not null
 #  vote_type  :integer          default("up"), not null

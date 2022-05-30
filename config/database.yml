@@ -1,10 +1,10 @@
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  username: <%= ENV.fetch('mysql_username') { 'funny' } %>
-  password: <%= ENV.fetch('mysql_password') { '' } %>
-  host: <%= ENV.fetch('mysql_hostname') { 'localhost' } %>
+  username: <%= ENV.fetch('MYSQL_USERNAME') { 'funny' } %>
+  password: <%= ENV.fetch('MYSQL_PASSWORD') { '' } %>
+  host: <%= ENV.fetch('MYSQL_HOSTNAME') { 'localhost' } %>
 
 development:
   <<: *default
@@ -19,4 +19,4 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV.fetch('mysql_database') { 'funny_production' } %>
+  database: <%= ENV.fetch('MYSQL_DATABASE') { 'funny_production' } %>

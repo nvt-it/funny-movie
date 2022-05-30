@@ -2,9 +2,9 @@
 #
 # Table name: users
 #
-#  id                  :bigint           unsigned, not null, primary key
-#  email               :string(255)      not null
-#  encrypted_password  :string(255)      not null
+#  id                  :bigint           not null, primary key
+#  email               :string           not null
+#  encrypted_password  :string           not null
 #  remember_created_at :datetime
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
