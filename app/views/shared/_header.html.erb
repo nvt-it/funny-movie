@@ -1,0 +1,30 @@
+<div class="header-wrapper">
+  <div class="header">
+    <div class="logo-wrapper">
+      <i class="fa fa-home fa-4x"></i>
+      <h1>Funny Movies</h1>
+    </div>
+    
+    <div class="account-wrapper">
+      <% if user_signed_in? %>
+        <span>Welcome <%= current_user.email %></span>
+        <%= link_to "Share a movie", new_movie_path, class: 'header-button link-button' %>
+        <%= link_to "Logout", destroy_user_session_path, class: "header-button link-button", :method => :delete %>
+
+      <% else %>
+        <form method="POST" action=<%= user_session_path %>>
+          <input name="user[email]" placeholder="Username" type='email' />
+          <input name="user[password]" class="mr-left-10" type="password" placeholder="Password" />
+          <button type="submit" class="header-button">
+            <span>Login / Register</span>
+          </button>
+        </form>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+</div>

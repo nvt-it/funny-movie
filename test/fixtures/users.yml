@@ -1,0 +1,8 @@
+user1:
+  id: 1
+  email: user1@example.com
+  encrypted_password: $2a$12$nZbw/C.nqTz7kvBpO9M.SegeG7VUsLhsUiecD6KbauBQJTJiK9WA6
+user2:
+  id: 2
+  email: user2@example.com
+  encrypted_password: $2a$12$nZbw/C.nqTz7kvBpO9M.SegeG7VUsLhsUiecD6KbauBQJTJiK9WA6

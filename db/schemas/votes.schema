@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table(:votes, id: { type: :bigint, unsigned: true }, charset: "utf8mb4", collation: "utf8mb4_general_ci") do |t|
+  t.bigint 'user_id', null: false
+  t.bigint 'movie_id', null: false
+  t.integer 'vote_type', null: false, default: 0
+
+  t.timestamps
+
+  t.index ['movie_id', 'user_id'], unique: true
+end

@@ -1,0 +1,21 @@
+<div class="movie-form-wrapper">
+  <form class="movie-form" action=<%= movies_path %> method="POST">
+    <div class="movie-form-title">
+      <span>Share a Youtube movie</span>
+    </div>
+
+    <div class="action-wrapper">
+      <div class="movie-input-group">
+        <div class="movie-input-label">
+          <span>Youtube URL: </span>
+        </div>
+        <input name="movie[url]" type="text" />
+      </div>
+
+      <div class="movie-input-group">
+        <div class="movie-input-label"></div>
+        <button type="submit" >Share</button>
+      </div>
+    </div>
+  </form>
+</div>

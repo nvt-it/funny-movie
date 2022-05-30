@@ -1,0 +1,16 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table(:movies, id: { type: :bigint, unsigned: true }, charset: "utf8mb4", collation: "utf8mb4_general_ci") do |t|
+  t.bigint 'user_id', null: false
+  t.string 'title', null: false
+  t.text 'description'
+  t.string 'thumb_url', null: false
+  t.string 'video_id', null: false
+  t.bigint 'vote_downs_count', null: false, default: 0
+  t.bigint 'vote_ups_count', null: false, default: 0
+
+  t.timestamps
+
+  t.index 'user_id'
+  t.index 'video_id', unique: true
+end

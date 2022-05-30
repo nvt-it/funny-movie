@@ -1,0 +1,6 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+require 'schemas/users.schema'
+require 'schemas/movies.schema'
+require 'schemas/votes.schema'
